@@ -445,7 +445,7 @@ footer {
   border: none; border-radius: 50%; cursor: pointer;
   display: none; align-items: center; justify-content: center;
   box-shadow: 0 4px 20px rgba(201,168,76,0.3);
-  transition: all 0.3s; z-index: 400; font-size: 1.1rem; font-weight: 700;
+  transition: all 0.3s; z-index: 10000; font-size: 1.1rem; font-weight: 700;
 }
 #scrollTop:hover { background: var(--gold-lt); transform: translateY(-3px); }
 
@@ -915,6 +915,7 @@ const scrollBtn = document.getElementById('scrollTop');
 window.addEventListener('scroll', () => {
   scrollBtn.style.display = window.scrollY > 500 ? 'flex' : 'none';
 }, { passive: true });
+scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
