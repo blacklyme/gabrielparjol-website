@@ -588,6 +588,67 @@ footer {
 
   footer { padding: 1.5rem 3rem; flex-direction: row; justify-content: space-between; }
 }
+/* ── HOVER: Achievement cards — number lights up gold ── */
+.ach-card .ach-num { transition: color 0.35s ease, text-shadow 0.35s ease; }
+.ach-card:hover .ach-num { color: var(--gold) !important; text-shadow: 0 0 30px rgba(201,168,76,0.35); }
+.ach-card .ach-label { transition: color 0.3s ease; }
+.ach-card:hover .ach-label { color: var(--gold-lt, #e8c96a); }
+/* ── HOVER: Education cards — degree turns gold ── */
+.edu-card .edu-degree { transition: color 0.3s ease; }
+.edu-card:hover .edu-degree { color: var(--gold); }
+.edu-card .edu-school { transition: color 0.3s ease; }
+.edu-card:hover .edu-school { color: #b5b0a6; }
+/* ── HOVER: Experience — company name brightens ── */
+.exp-item .exp-company { transition: color 0.3s ease; }
+.exp-item:hover .exp-company { color: var(--gold); }
+.exp-item .exp-role { transition: color 0.3s ease; }
+.exp-item:hover .exp-role { color: #e8c96a; }
+/* ── HOVER: Hero stat cells — number brightens ── */
+.hero-stat-cell .hero-stat-num { transition: color 0.3s ease, text-shadow 0.3s ease; }
+.hero-stat-cell:hover .hero-stat-num { color: #e8c96a; text-shadow: 0 0 20px rgba(201,168,76,0.4); }
+.hero-stat-cell .hero-stat-lbl { transition: color 0.3s ease; }
+.hero-stat-cell:hover .hero-stat-lbl { color: #b5b0a6; }
+/* ── HOVER: Market cells ── */
+.market-cell .market-cell-name { transition: color 0.3s ease; }
+.market-cell:hover .market-cell-name { color: var(--gold); }
+/* ── HOVER: Contact links — icon lifts ── */
+.contact-link svg { transition: transform 0.3s ease; }
+.contact-link:hover svg { transform: translateY(-2px); }
+/* ── MOBILE TYPOGRAPHY — all devices 320px–430px ── */
+@media (max-width: 639px) {
+  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; }
+  .hero-title { font-size: 0.75rem; letter-spacing: 0.1em; line-height: 1.6; }
+  .hero-desc { font-size: 0.97rem; line-height: 1.85; }
+  .hero-open { font-size: 0.75rem; letter-spacing: 0.12em; }
+  .hero-stat-num { font-size: clamp(1.1rem, 4vw, 1.5rem); }
+  .hero-stat-lbl { font-size: 0.62rem; letter-spacing: 0.06em; }
+  .lang-tag { font-size: 0.7rem; letter-spacing: 0.08em; padding: 0.2rem 0.55rem; }
+  .ticker-item { font-size: 0.72rem; letter-spacing: 0.1em; }
+  .section-label { font-size: 0.75rem; letter-spacing: 0.18em; margin-bottom: 1rem; }
+  .section-title { font-size: clamp(1.8rem, 7vw, 2.5rem); line-height: 1.15; }
+  .btn { font-size: 0.78rem; letter-spacing: 0.12em; padding: 0.85rem 1.5rem; min-height: 48px; }
+  .market-cell-name { font-size: 0.72rem; letter-spacing: 0.08em; }
+  .comp-tag { font-size: 0.72rem; letter-spacing: 0.06em; padding: 0.3rem 0.65rem; }
+  .exp-company { font-size: clamp(1rem, 4vw, 1.3rem); line-height: 1.3; }
+  .exp-role { font-size: 0.78rem; letter-spacing: 0.1em; }
+  .exp-period { font-size: 0.72rem; letter-spacing: 0.06em; }
+  .exp-current, .exp-parallel { font-size: 0.68rem; letter-spacing: 0.08em; padding: 0.15rem 0.5rem; }
+  .exp-location { font-size: 0.72rem; }
+  .exp-desc { font-size: 0.92rem; line-height: 1.8; }
+  .exp-bullets li { font-size: 0.92rem; line-height: 1.75; }
+  .ach-num { font-size: clamp(1.6rem, 6vw, 2.2rem); }
+  .ach-label { font-size: 0.72rem; letter-spacing: 0.1em; }
+  .ach-desc { font-size: 0.88rem; line-height: 1.75; }
+  .edu-degree { font-size: clamp(0.95rem, 3.5vw, 1.2rem); line-height: 1.35; }
+  .edu-school { font-size: 0.78rem; letter-spacing: 0.1em; }
+  .edu-period { font-size: 0.72rem; letter-spacing: 0.06em; }
+  .contact-eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; }
+  .contact-link { font-size: 0.82rem; min-height: 48px; }
+  .footer-copy, .footer-loc { font-size: 0.72rem; letter-spacing: 0.06em; }
+  .mobile-menu-links a { font-size: 0.82rem; min-height: 52px; display: flex; align-items: center; }
+  .nav-links a { font-size: 0.78rem; }
+  .section { padding: 4.5rem 1.25rem; }
+}
 </style>
 </head>
 <body>
