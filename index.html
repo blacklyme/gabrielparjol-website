@@ -274,7 +274,7 @@ nav.scrolled {
 .section-header { display: flex; align-items: flex-start; gap: 1.2rem; margin-bottom: 3rem; }
 .section-num {
   font-family: 'Cormorant Garamond', serif; font-size: 4rem;
-  font-weight: 300; color: var(--border); line-height: 1; flex-shrink: 0;
+  font-weight: 300; color: var(--gold); opacity: 0.28; line-height: 1; flex-shrink: 0;
 }
 .section-label { font-size: 0.56rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
 .section-title {
@@ -347,7 +347,7 @@ nav.scrolled {
 .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
 .exp-bullets li {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(0.95rem, 3vw, 1rem); font-weight: 300;
+  font-size: clamp(1rem, 3.5vw, 1.18rem); font-weight: 300;
   color: var(--muted); line-height: 1.65; padding-left: 1.1rem; position: relative;
 }
 .exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; top: 0.1rem; }
@@ -651,13 +651,11 @@ footer {
 }
 /* ── FIX: Section numbers — make them gold and visible ── */
 .section-num {
-  color: var(--gold) !important;
-  opacity: 0.18;
   transition: opacity 0.3s ease;
 }
 .section:hover .section-num,
 .section-header:hover .section-num {
-  opacity: 0.35;
+  opacity: 0.5;
 }
 /* ── FIX: Normalize inconsistent mobile font sizes ── */
 @media (max-width: 639px) {
