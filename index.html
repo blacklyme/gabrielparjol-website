@@ -926,4 +926,7 @@ const revealObs = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
-revealEls.forEach(el => revealObs.o
+revealEls.forEach(el => revealObs.observe(el));
+</script>
+</body>
+</html>
