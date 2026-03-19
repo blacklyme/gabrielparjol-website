@@ -274,7 +274,7 @@ nav.scrolled {
 .section-header { display: flex; align-items: flex-start; gap: 1.2rem; margin-bottom: 3rem; }
 .section-num {
   font-family: 'Cormorant Garamond', serif; font-size: 4rem;
-  font-weight: 300; color: var(--gold); opacity: 0.28; line-height: 1; flex-shrink: 0;
+  font-weight: 300; color: var(--gold); opacity: 0.45; line-height: 1; flex-shrink: 0;
 }
 .section-label { font-size: 0.56rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
 .section-title {
@@ -506,6 +506,19 @@ footer {
   .edu-degree    { font-size: 1.5rem; }
   .edu-desc      { font-size: 1.25rem; }
 
+  /* Experience — extra classes */
+  .exp-desc           { font-size: 1.31rem; line-height: 1.8; }
+  .exp-current, .exp-parallel { font-size: 0.78rem; letter-spacing: 0.08em; padding: 0.15rem 0.5rem; }
+
+  /* Achievements — desc */
+  .ach-num   { font-size: clamp(2rem, 7.5vw, 2.75rem); }
+
+  /* Education — desc */
+  .edu-desc  { font-size: 1.25rem; }
+
+  /* Buttons */
+  .btn { font-size: 1.06rem; letter-spacing: 0.12em; padding: 0.85rem 1.5rem; min-height: 48px; }
+
   /* Contact */
   .contact-headline { font-size: clamp(2.5rem, 10vw, 5rem); }
   .contact-eyebrow  { font-size: 1.03rem; letter-spacing: 0.2em; }
@@ -514,6 +527,12 @@ footer {
   /* Footer */
   .footer-copy   { font-size: 1.03rem; }
   .footer-loc    { font-size: 1.03rem; }
+
+  /* Mobile menu */
+  .mobile-menu-links a { font-size: 1rem; min-height: 52px; display: flex; align-items: center; }
+
+  /* Section spacing */
+  .section { padding: 4.5rem 1.25rem; }
 }
 
 /* ════════════════════════════
@@ -614,67 +633,13 @@ footer {
 /* ── HOVER: Contact links — icon lifts ── */
 .contact-link svg { transition: transform 0.3s ease; }
 .contact-link:hover svg { transform: translateY(-2px); }
-/* ── MOBILE TYPOGRAPHY — all devices 320px–430px ── */
-@media (max-width: 639px) {
-  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; }
-  .hero-title { font-size: 0.75rem; letter-spacing: 0.1em; line-height: 1.6; }
-  .hero-desc { font-size: 0.97rem; line-height: 1.85; }
-  .hero-open { font-size: 0.75rem; letter-spacing: 0.12em; }
-  .hero-stat-num { font-size: clamp(1.1rem, 4vw, 1.5rem); }
-  .hero-stat-lbl { font-size: 0.62rem; letter-spacing: 0.06em; }
-  .lang-tag { font-size: 0.7rem; letter-spacing: 0.08em; padding: 0.2rem 0.55rem; }
-  .ticker-item { font-size: 0.72rem; letter-spacing: 0.1em; }
-  .section-label { font-size: 0.75rem; letter-spacing: 0.18em; margin-bottom: 1rem; }
-  .section-title { font-size: clamp(1.8rem, 7vw, 2.5rem); line-height: 1.15; }
-  .btn { font-size: 0.78rem; letter-spacing: 0.12em; padding: 0.85rem 1.5rem; min-height: 48px; }
-  .market-cell-name { font-size: 0.72rem; letter-spacing: 0.08em; }
-  .comp-tag { font-size: 0.72rem; letter-spacing: 0.06em; padding: 0.3rem 0.65rem; }
-  .exp-company { font-size: clamp(1rem, 4vw, 1.3rem); line-height: 1.3; }
-  .exp-role { font-size: 0.78rem; letter-spacing: 0.1em; }
-  .exp-period { font-size: 0.72rem; letter-spacing: 0.06em; }
-  .exp-current, .exp-parallel { font-size: 0.68rem; letter-spacing: 0.08em; padding: 0.15rem 0.5rem; }
-  .exp-location { font-size: 0.72rem; }
-  .exp-desc { font-size: 0.92rem; line-height: 1.8; }
-  .exp-bullets li { font-size: 0.92rem; line-height: 1.75; }
-  .ach-num { font-size: clamp(1.6rem, 6vw, 2.2rem); }
-  .ach-label { font-size: 0.72rem; letter-spacing: 0.1em; }
-  .ach-desc { font-size: 0.88rem; line-height: 1.75; }
-  .edu-degree { font-size: clamp(0.95rem, 3.5vw, 1.2rem); line-height: 1.35; }
-  .edu-school { font-size: 0.78rem; letter-spacing: 0.1em; }
-  .edu-period { font-size: 0.72rem; letter-spacing: 0.06em; }
-  .contact-eyebrow { font-size: 0.75rem; letter-spacing: 0.18em; }
-  .contact-link { font-size: 0.82rem; min-height: 48px; }
-  .footer-copy, .footer-loc { font-size: 0.72rem; letter-spacing: 0.06em; }
-  .mobile-menu-links a { font-size: 0.82rem; min-height: 52px; display: flex; align-items: center; }
-  .nav-links a { font-size: 0.78rem; }
-  .section { padding: 4.5rem 1.25rem; }
-}
 /* ── FIX: Section numbers — make them gold and visible ── */
 .section-num {
   transition: opacity 0.3s ease;
 }
 .section:hover .section-num,
 .section-header:hover .section-num {
-  opacity: 0.5;
-}
-/* ── FIX: Normalize inconsistent mobile font sizes ── */
-@media (max-width: 639px) {
-  /* About / bio section — was too large, normalize to match rest of site */
-  .about-bio,
-  .about-text,
-  .bio-text,
-  .hero-desc,
-  .section-desc {
-    font-size: 0.95rem !important;
-    line-height: 1.8 !important;
-  }
-  /* Ensure ALL body/paragraph text is consistent at 0.95rem */
-  .exp-bullets li,
-  .exp-desc,
-  .ach-desc {
-    font-size: 0.92rem !important;
-    line-height: 1.75 !important;
-  }
+  opacity: 0.7;
 }
 </style>
 </head>
