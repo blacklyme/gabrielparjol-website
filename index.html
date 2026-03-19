@@ -649,6 +649,35 @@ footer {
   .nav-links a { font-size: 0.78rem; }
   .section { padding: 4.5rem 1.25rem; }
 }
+/* ── FIX: Section numbers — make them gold and visible ── */
+.section-num {
+  color: var(--gold) !important;
+  opacity: 0.18;
+  transition: opacity 0.3s ease;
+}
+.section:hover .section-num,
+.section-header:hover .section-num {
+  opacity: 0.35;
+}
+/* ── FIX: Normalize inconsistent mobile font sizes ── */
+@media (max-width: 639px) {
+  /* About / bio section — was too large, normalize to match rest of site */
+  .about-bio,
+  .about-text,
+  .bio-text,
+  .hero-desc,
+  .section-desc {
+    font-size: 0.95rem !important;
+    line-height: 1.8 !important;
+  }
+  /* Ensure ALL body/paragraph text is consistent at 0.95rem */
+  .exp-bullets li,
+  .exp-desc,
+  .ach-desc {
+    font-size: 0.92rem !important;
+    line-height: 1.75 !important;
+  }
+}
 </style>
 </head>
 <body>
