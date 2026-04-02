@@ -437,6 +437,18 @@ footer {
   font-size: 0.52rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--muted);
 }
+.built-by-divider {
+  width: 100%; height: 1px; margin-top: 1rem;
+  background: linear-gradient(to right, transparent, var(--border), transparent);
+}
+.built-by-link {
+  margin-top: 0.75rem;
+  font-size: 0.5rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+  text-decoration: none; opacity: 0.4;
+  transition: opacity 0.3s, color 0.3s;
+}
+.built-by-link:hover { opacity: 1; color: var(--accent); }
 
 /* ── SCROLL TO TOP ── */
 #scrollTop {
@@ -996,6 +1008,8 @@ footer {
 <footer>
   <div class="footer-copy">© 2026 Gabriel Parjol. All rights reserved.</div>
   <div class="footer-loc">Dumbravița · Timișoara, Romania · Available Internationally</div>
+  <div class="built-by-divider"></div>
+  <a href="https://mustache88.com" target="_blank" rel="noopener" class="built-by-link">BUILT BY MUSTACHE88 &rarr;</a>
 </footer>
 
 <button id="scrollTop" aria-label="Back to top">↑</button>
