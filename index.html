@@ -431,14 +431,18 @@ footer {
   background: var(--bg2); border-top: 1px solid var(--border);
   padding: 2rem var(--pad-x);
   display: flex; flex-direction: column;
-  align-items: center; gap: 1rem; text-align: center;
+  align-items: center; gap: 0; text-align: center;
+}
+.footer-main {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.75rem; width: 100%;
 }
 .footer-copy, .footer-loc {
   font-size: 0.52rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--muted);
 }
 .built-by-divider {
-  width: 100%; height: 1px; margin-top: 1rem;
+  width: 100%; height: 1px; margin-top: 1.25rem;
   background: linear-gradient(to right, transparent, var(--border), transparent);
 }
 .built-by-link {
@@ -567,7 +571,7 @@ footer {
   .edu-grid { flex-direction: row; }
   .edu-card { flex: 1; }
 
-  footer { flex-direction: row; justify-content: space-between; text-align: left; }
+  .footer-main { flex-direction: row; justify-content: space-between; text-align: left; }
 }
 
 /* ════════════════════════════
@@ -617,7 +621,8 @@ footer {
   /* Education — 2 col */
   .edu-grid { flex-direction: row; }
 
-  footer { padding: 1.5rem 3rem; flex-direction: row; justify-content: space-between; }
+  footer { padding: 1.5rem 3rem; }
+  .footer-main { flex-direction: row; justify-content: space-between; }
 }
 /* ── HOVER: Achievement cards — number lights up gold ── */
 .ach-card .ach-num { transition: color 0.35s ease, text-shadow 0.35s ease; }
@@ -1006,8 +1011,10 @@ footer {
 </section>
 
 <footer>
-  <div class="footer-copy">© 2026 Gabriel Parjol. All rights reserved.</div>
-  <div class="footer-loc">Dumbravița · Timișoara, Romania · Available Internationally</div>
+  <div class="footer-main">
+    <div class="footer-copy">© 2026 Gabriel Parjol. All rights reserved.</div>
+    <div class="footer-loc">Dumbravița · Timișoara, Romania · Available Internationally</div>
+  </div>
   <div class="built-by-divider"></div>
   <a href="https://mustache88.com" target="_blank" rel="noopener" class="built-by-link">BUILT BY MUSTACHE88 &rarr;</a>
 </footer>
